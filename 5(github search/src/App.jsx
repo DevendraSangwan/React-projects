@@ -19,6 +19,9 @@ export default function SearchApp() {
     return () => clearTimeout(timer);
   }, [query]);
 
+
+  
+
   return (
     <div className="main-container">
       <div className="header">
