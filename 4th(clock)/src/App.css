@@ -1,0 +1,72 @@
+/* Full page centering */
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+.clock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #050505; /* Pitch Black */
+  font-family: 'Courier New', Courier, monospace; /* Digital look */
+}
+
+/* The Glowing Card */
+.clock-card {
+  background: #111;
+  padding: 3rem 5rem;
+  border-radius: 20px;
+  border: 1px solid #333;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background glow */
+.clock-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.05) 0%, transparent 70%);
+  z-index: 0;
+}
+
+.label {
+  color: #008cff;
+  font-size: 0.8rem;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  opacity: 0.7;
+}
+
+/* Neon Time Display */
+.time-display {
+  font-size: 5rem;
+  color: #00f2ff;
+  margin: 0;
+  font-weight: 800;
+  text-shadow: 0 0 10px #00f2ff, 
+               0 0 20px #00f2ff, 
+               0 0 40px #008cff;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .time-display {
+    font-size: 2.5rem;
+  }
+  .clock-card {
+    padding: 2rem;
+  }
+}

@@ -1,0 +1,118 @@
+/* App.css */
+
+:root {
+  --primary-color: #61dafb;
+  --bg-color: #282c34;
+  --text-color: white;
+  --square-size: 80px;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+/* Layout for the Game and the Fetch Data */
+.game {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  background: #333;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Board Styling */
+.status {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  background: #fff;
+  border: 2px solid #333;
+  float: left;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: var(--square-size);
+  height: var(--square-size);
+  width: var(--square-size);
+  margin-right: -2px;
+  margin-top: -2px;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.square:hover {
+  background: #f0f0f0;
+}
+
+.square:focus {
+  outline: none;
+  background: #e6f7ff;
+}
+
+/* Game Info / History List */
+.game-info {
+  margin-left: 20px;
+  min-width: 200px;
+}
+
+.game-info ol {
+  padding-left: 0;
+  list-style: none;
+}
+
+.game-info li {
+  margin-bottom: 10px;
+}
+
+.game-info button {
+  background: #444;
+  color: white;
+  border: 1px solid var(--primary-color);
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s;
+}
+
+.game-info button:hover {
+  background: var(--primary-color);
+  color: #222;
+}
+
+/* Data Fetching Section (from your App function) */
+.data-container {
+  margin-top: 40px;
+  background: #222;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+.data-container p {
+  border-bottom: 1px solid #444;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.data-container p:last-child {
+  border-bottom: none;
+}
