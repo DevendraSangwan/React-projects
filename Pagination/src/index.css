@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  background: #0d1117;
+  color: white;
+
+  overflow: hidden; /* 🚫 no scroll */
+}
+
+.container {
+  height: 100vh;
+  padding: 20px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* TITLE */
+h1 {
+  color: #58a6ff;
+}
+
+/* SEARCH */
+input {
+  padding: 10px;
+  width: 300px;
+  margin: 10px auto;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+  background: #161b22;
+  color: white;
+}
+
+/* GRID 4x2 FIXED */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  gap: 15px;
+  height: 65vh;
+}
+
+/* CARD */
+.card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* IMAGE */
+.card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #58a6ff;
+}
+
+/* LINK */
+.card a {
+  margin-top: 8px;
+  padding: 5px 10px;
+  background: #238636;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* PAGINATION */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* BUTTON BASE STYLE */
+.pagination button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+
+  background-color: #238636;  /* GitHub green */
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* HOVER EFFECT */
+.pagination button:hover {
+  background-color: #2ea043;
+  transform: translateY(-2px);
+}
+
+/* ACTIVE CLICK EFFECT */
+.pagination button:active {
+  transform: scale(0.95);
+}
+
+/* DISABLED BUTTON */
+.pagination button:disabled {
+  background-color: #30363d;
+  color: #8b949e;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* PAGE TEXT */
+.pagination span {
+  color: #c9d1d9;
+  font-size: 15px;
+  font-weight: 500;
+}
+.card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+
+  padding: 15px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 8px;
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #238636;
+}
+
+.card h3 {
+  color: #c9d1d9;
+}
+
+.bio {
+  font-size: 12px;
+  color: #8b949e;
+  padding: 0 5px;
+  min-height: 30px;
+}
