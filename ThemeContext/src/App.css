@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+}
+
+.container {
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  width: 400px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.container h1 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.container p {
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+
+.theme-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.theme-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Light Theme */
+.app.light {
+  background: linear-gradient(135deg, #f9f9f9, #dbeafe);
+  color: #111;
+}
+
+.app.light .container {
+  background: white;
+}
+
+.app.light .theme-btn {
+  background: #2563eb;
+  color: white;
+}
+
+/* Dark Theme */
+.app.dark {
+  background: linear-gradient(135deg, #111827, #1f2937);
+  color: white;
+}
+
+.app.dark .container {
+  background: #1e293b;
+}
+
+.app.dark .theme-btn {
+  background: #facc15;
+  color: black;
+}
